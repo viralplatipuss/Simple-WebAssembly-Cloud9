@@ -4,11 +4,11 @@ Do you want to test out the simplest compiling of C code to WebAssembly on an AW
 
 You do? Well what are the chances. That's exactly what this project is for!
 
-How about just a really simple bit of C code?
-Maybe it compiles down to a WASM file.
-Maybe that WASM file is then converted to a base64 string.
-Maybe that string is then directly embedded into a single HTML file that already contains embedded JS to run it.
-Maybe you can even download that single HTML file and run locally without issues.
+- How about just a really simple bit of C code?
+- Maybe it compiles down to a WASM file.
+- Maybe that WASM file is then converted to a base64 string.
+- Maybe that string is then directly embedded into a single HTML file that already contains embedded JS to run it.
+- Maybe you can even download that single HTML file and run locally without issues.
 
 You'll just have to see for yourself!
 
