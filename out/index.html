@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+<div id="w" style="display: none;">
+AGFzbQEAAAABBQFgAAF/AwIBAAQFAXABAQEFAwEAAgYIAX8BQYCIBAsHFwIGbWVtb3J5AgAKd2hh
+dE51bWJlcgAACgYBBABBEQsAFARuYW1lAQ0BAAp3aGF0TnVtYmVyAHYJcHJvZHVjZXJzAQxwcm9j
+ZXNzZWQtYnkBBWNsYW5nVjExLjAuMCAoaHR0cHM6Ly9naXRodWIuY29tL2xsdm0vbGx2bS1wcm9q
+ZWN0IDE3NjI0OWJkNjczMmE4MDQ0ZDQ1NzA5MmVkOTMyNzY4NzI0YTZmMDYp
+</div><script>
+// Base64 string decoder
+const decode = (b64) => {
+  const str = window.atob(b64);
+  const array = new Uint8Array(str.length);
+  for (let i = 0; i < str.length; i += 1) {
+    array[i] = str.charCodeAt(i);
+  }
+  return array.buffer;
+};
+
+const memory = new WebAssembly.Memory({ initial: 256, maximum: 512 });
+
+WebAssembly.instantiate(new Uint8Array(decode(document.getElementById('w').innerHTML)), { env: { memory } }).then(results => {
+  const instance = results.instance;
+  alert(instance.exports.whatNumber());
+}).catch(console.error);</script>
+</body>
+</html>
