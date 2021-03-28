@@ -4,8 +4,6 @@ _build/wasi/bin/clang --sysroot=_build/wasi/share/wasi-sysroot --target=wasm32 -
 
 cp src/template/index_template.html out/index.html
 
-rm -f temp_
-
 echo '<div id="w" style="display: none;">' >> temp_
 base64 index.wasm >> temp_
 echo '</div><script>' >> temp_
