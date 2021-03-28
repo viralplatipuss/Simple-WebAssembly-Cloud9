@@ -20,9 +20,13 @@ This project avoids using emscripten or other frameworks and compiles with strai
 Log in to AWS and spin up a new Cloud9 environment.
 I'd recommend selecting access via Systems manager and Amazon Linux 2. But who am I to tell you what to do.
 
-Now open a new terminal window in Cloud9 and clone this repo using git clone.
+Now open a new terminal window in Cloud9 and clone this repo using git clone:
 
-Now right-click > "Run" on the install.sh file.
+```bash
+git clone https://github.com/viralplatipuss/Simple-WebAssembly-Cloud9.git
+```
+
+Now right-click > "Run" on the **install.sh** file.
 
 The script will download and setup Clang via the WasiSDK from WebAssembly.org
 The SDK itself just uses git submodules to pull in Clang/LLVM. Don't even worry about it.
@@ -41,7 +45,7 @@ I'll tell you where. It came from the C code found in src/index.c
 
 Why 17? Who knows! Go on, change it, I dare you.
 
-Now right-click build.sh and "Run".
+Now right-click **build.sh** and "Run".
 
 Now preview out/index.html again. Did it change? Probably.
 
